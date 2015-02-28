@@ -23,7 +23,7 @@ public class Generator {
 		String name;
 		if (gender.equalsIgnoreCase("male")) {
 			readFile(fNameMaleFile);
-			random = rand.nextInt(fName.size()-1);
+			random = rand.nextInt(fName.size() - 1);
 			name = fName.get(random);
 		} else if (gender.equalsIgnoreCase("female")) {
 			name = "Josephine";
@@ -48,18 +48,15 @@ public class Generator {
 		try {
 			for (String line : Files.readAllLines(Paths.get(file),
 					Charset.defaultCharset())) {
-				if((file.equals(fNameMaleFile)) || (file.equals(fNameFemaleFile))){
+				if ((file.equals(fNameMaleFile))
+						|| (file.equals(fNameFemaleFile))) {
 					fName.add(line);
+				} else if (file.equals(mNameFile)) {
+					mName.add(line);
+				} else if (file.equals(lNameFile)) {
+					lName.add(line);
 				}
-				else
-					if(file.equals(mNameFile)){
-						mName.add(line);
-					}
-					else
-						if(file.equals(lNameFile)){
-							lName.add(line);
-						}
-				
+
 				fName.add(line);
 			}
 

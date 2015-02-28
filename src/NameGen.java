@@ -1,10 +1,9 @@
 import java.util.Scanner;
 
 public class NameGen {
-	private static String fName, mName, lName,gender,fullName;
+	private static String fName, mName, lName, gender, fullName;
 	private static Generator gen = new Generator();
 	static Scanner scan = new Scanner(System.in);
-
 
 	public static void main(String[] args) {
 		System.out.println("Starting Name Generator");
@@ -16,10 +15,9 @@ public class NameGen {
 		mName = gen.createMiddleName();
 		System.out.println("Choosing Last Name... ");
 		lName = gen.createLastName();
-		
+
 		fullName = fName + " " + mName + " " + lName;
 		System.out.println("Your name is: " + fullName);
-		
 
 	}
 
